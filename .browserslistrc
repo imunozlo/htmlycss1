@@ -1,0 +1,16 @@
+# Navegadores que queremos soportar
+
+# Opciones por defecto
+defaults
+last 2 versions
+> 0.5%
+not dead
+
+# Configuración adicional personalizada
+not IE 11
+Firefox ESR
+Chrome >= 60
+Firefox >= 60
+Edge >= 79
+Safari >= 12
+iOS >= 12
