@@ -1,0 +1,136 @@
+@use "base" as *;
+@use "sass:color";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: $background-color;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: $secondary-color;
+  color: #fff;
+  padding: 0.5rem;
+  z-index: 100;
+  transition: top 0.3s;
+
+  &:focus {
+    top: 0;
+  }
+}
+
+header {
+  background: $primary-color;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+
+    li a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+main {
+  padding: 2rem;
+
+  .detalle-featured {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+
+  .detalle-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .detalle-text {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 2rem;
+      background: #fff; // Blanco es adecuado para el fondo de texto
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+      h2 {
+        font-size: 2rem;
+        color: $primary-color;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: $text-color;
+        margin-bottom: 1.5rem;
+      }
+
+      p:last-child {
+        font-weight: bold;
+        color: $primary-color;
+      }
+    }
+
+    .detalle-gallery {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      img {
+        width: calc(33.333% - 1rem);
+        max-width: 250px;
+        height: auto;
+        border-radius: 4px;
+      }
+    }
+
+    .detalle-video {
+      text-align: center;
+
+      video {
+        width: 100%;
+        max-width: 800px;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+footer {
+  background: $primary-color;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
