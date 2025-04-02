@@ -1,14 +1,33 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcel Vanilla App</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <include src="header.html"></include>
-    <h1>Parcel Vanilla App</h1>
-    <p>Edit <code>src/index.html</code> to get started!</p>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gastronomía de Castellón</title>
+  <!-- Enlaza el CSS generado (puede ser compilado desde SASS) -->
+  <link rel="stylesheet" href="css/style.scss">
+</head>
+<body>
+  <!-- Enlace para saltar la navegación (accesibilidad) -->
+  <a href="#main" class="skip-link">Saltar navegación</a>
+
+
+
+  <include src="src/pages/header.html"></include>
+
+  <main id="main">
+    <!-- Sección principal o "hero" con imagen destacada y llamada a la acción -->
+    <section class="main-section">
+      <img src="img/paella2.jpg" alt="Vista panorámica de Castellón y platos típicos">
+      <h2>Bienvenido a la experiencia gastronómica de Castellón</h2>
+      <p>Descubre eventos culinarios que te harán disfrutar de la mejor comida de la región.</p>
+      <a href="pages/categoria.html" class="btn">Explorar Categoría</a>
+    </section>
+  </main>
+
+  <include src="src/pages/footer.html"></include>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
