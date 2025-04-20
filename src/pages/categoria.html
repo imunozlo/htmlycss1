@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eventos Gastronómicos de Castellón</title>
-  <link rel="stylesheet" href="../css/style.scss">
+  <link rel="stylesheet" href="../css/style.scss" />
 </head>
 <body>
   <a href="#main" class="skip-link">Saltar navegación</a>
-
   <header>
     <h1>Eventos Gastronómicos de Castellón</h1>
     <nav>
@@ -18,23 +17,42 @@
       </ul>
     </nav>
   </header>
-
   <main id="main">
     <section class="eventos">
       <h2>Eventos destacados</h2>
       <ul class="event-list">
         <li class="evento">
-          <img src="../img/alcachofa.jpg" alt="Imagen de la Feria de la alcachofa de Benicarló">
+          <picture>
+            <!-- Desktop -->
+            <source srcset="../img/alcachofa.jpg?as=webp&width=1024" type="image/webp" media="(min-width: 1024px)" />
+            <source srcset="../img/alcachofa.jpg?width=1024" type="image/jpeg" media="(min-width: 1024px)" />
+            <!-- Tablet -->
+            <source srcset="../img/alcachofa.jpg?as=webp&width=800" type="image/webp" media="(min-width: 600px)" />
+            <source srcset="../img/alcachofa.jpg?width=800" type="image/jpeg" media="(min-width: 600px)" />
+            <!-- Mobile -->
+            <source srcset="../img/alcachofa.jpg?as=webp&width=480" type="image/webp" />
+            <source srcset="../img/alcachofa.jpg?width=480" type="image/jpeg" />
+            <img src="../img/alcachofa.jpg?width=480" alt="Imagen de la Feria de la alcachofa de Benicarló" />
+          </picture>
           <div class="evento-info">
             <h3>Fiesta de la alcachofa (Benicarló)</h3>
-            <p>Gran fiesta benicarlanda cuenta cada año con 
-              mercado gastronómico y feria de productos gastronómicos.</p>
+            <p>Gran fiesta benicarlanda con mercado gastronómico y feria de productos.</p>
             <a href="detalle-alcachofa.html" class="btn">Ver detalle</a>
           </div>
         </li>
-     
         <li class="evento">
-          <img src="../img/ruta-tapa.jpeg" alt="Imagen del Festival de Tapas de Castellón">
+          <picture>
+            <!-- Desktop -->
+            <source srcset="../img/ruta-tapa.jpeg?as=webp&width=1024" type="image/webp" media="(min-width: 1024px)" />
+            <source srcset="../img/ruta-tapa.jpeg?width=1024" type="image/jpeg" media="(min-width: 1024px)" />
+            <!-- Tablet -->
+            <source srcset="../img/ruta-tapa.jpeg?as=webp&width=800" type="image/webp" media="(min-width: 600px)" />
+            <source srcset="../img/ruta-tapa.jpeg?width=800" type="image/jpeg" media="(min-width: 600px)" />
+            <!-- Mobile -->
+            <source srcset="../img/ruta-tapa.jpeg?as=webp&width=480" type="image/webp" />
+            <source srcset="../img/ruta-tapa.jpeg?width=480" type="image/jpeg" />
+            <img src="../img/ruta-tapa.jpeg?width=480" alt="Imagen del Festival de Tapas de Castellón" />
+          </picture>
           <div class="evento-info">
             <h3>Ruta de la tapa (Castellón)</h3>
             <p>Un encuentro de sabores y tradición en el corazón de la provincia.</p>
@@ -42,7 +60,18 @@
           </div>
         </li>
         <li class="evento">
-          <img src="../img/queseria.jpg" alt="Imagen de la Exposición de Vinos y Quesos">
+          <picture>
+            <!-- Desktop -->
+            <source srcset="../img/queseria.jpg?as=webp&width=1024" type="image/webp" media="(min-width: 1024px)" />
+            <source srcset="../img/queseria.jpg?width=1024" type="image/jpeg" media="(min-width: 1024px)" />
+            <!-- Tablet -->
+            <source srcset="../img/queseria.jpg?as=webp&width=800" type="image/webp" media="(min-width: 600px)" />
+            <source srcset="../img/queseria.jpg?width=800" type="image/jpeg" media="(min-width: 600px)" />
+            <!-- Mobile -->
+            <source srcset="../img/queseria.jpg?as=webp&width=480" type="image/webp" />
+            <source srcset="../img/queseria.jpg?width=480" type="image/jpeg" />
+            <img src="../img/queseria.jpg?width=480" alt="Imagen de la Exposición de Vinos y Quesos" />
+          </picture>
           <div class="evento-info">
             <h3>Visita y cata quesería (Les Coves)</h3>
             <p>Degustación y maridaje con los mejores productos de la quesería Tot de Poble.</p>
@@ -52,9 +81,7 @@
       </ul>
     </section>
   </main>
-
   <include src="src/pages/footer.html"></include>
-
   <script src="../js/script.js"></script>
 </body>
 </html>

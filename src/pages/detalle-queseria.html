@@ -21,7 +21,12 @@
 
   <main id="main">
     <section class="detalle-featured">
-      <img src="../img/queseria.jpg" alt="Imagen destacada de la quesería Tot de Poble en Les Coves de Vinromà">
+      <picture>
+        <source media="(min-width: 1024px)" srcset="../img/queseria.jpg?width=1200">
+        <source media="(min-width: 600px)" srcset="../img/queseria.jpg?width=800">
+        <img src="../img/queseria.jpg?width=400" 
+             alt="Imagen destacada de la quesería Tot de Poble en Les Coves de Vinromà">
+      </picture>
     </section>
 
     <section class="detalle-content">
@@ -44,12 +49,30 @@
           la visita a la quesería Tot de Poble se convierte en una cita ineludible para disfrutar y aprender.
         </p>
       </article>
-
       <article class="detalle-gallery">
-        <img src="../img/queseria1.jpg" alt="Puesto de venta de la quesería Tot de Poble">
-        <img src="../img/queseria2.jpg" alt="Elaboración del queso">
-        <img src="../img/queseria3.jpg" alt="Tabla de quesos">
+        <img
+          src="../img/queseria1.jpg?width=400"
+          srcset="
+            ../img/queseria1.jpg?width=400 1x,
+            ../img/queseria1.jpg?width=800 2x"
+          alt="Puesto de venta de la quesería Tot de Poble">
+      
+        <img
+          src="../img/queseria2.jpg?width=400"
+          srcset="
+            ../img/queseria2.jpg?width=400 1x,
+            ../img/queseria2.jpg?width=800 2x"
+          alt="Elaboración del queso">
+      
+        <img
+          src="../img/queseria3.jpg?width=400"
+          srcset="
+            ../img/queseria3.jpg?width=400 1x,
+            ../img/queseria3.jpg?width=800 2x"
+          alt="Tabla de quesos">
       </article>
+      
+      
 
       <article class="detalle-video">
         <div class="video-container">

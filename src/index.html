@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Gastronomía de Castellón</title>
-  <!-- Enlaza el CSS generado (puede ser compilado desde SASS) -->
-  <link rel="stylesheet" href="css/style.scss">
+  <link rel="stylesheet" href="css/style.scss" />
 </head>
+
 <body>
   <!-- Enlace para saltar la navegación (accesibilidad) -->
   <a href="#main" class="skip-link">Saltar navegación</a>
@@ -17,9 +18,34 @@
   <include src="src/pages/header.html"></include>
 
   <main id="main">
-    <!-- Sección principal o "hero" con imagen destacada y llamada a la acción -->
+    <!-- SVG Animado: Tenedor y cuchillo -->
+    <svg class="culinary-icon" viewBox="0 0 100 100" role="img" aria-labelledby="icon-title icon-desc">
+      <title id="icon-title">Icono culinario</title>
+      <desc id="icon-desc">Tenedor y cuchillo estilizados animados</desc>
+      <path class="fork"
+        d="M30,20 L30,80 M20,20 L20,40 M30,20 C30,10 20,10 20,20 M40,20 L40,40 M30,20 C30,10 40,10 40,20 M50,20 L50,40 M30,20 C30,10 50,10 50,20" />
+      <path class="knife" d="M70,20 L70,80 M70,20 C80,20 85,30 85,40 L85,50 C85,60 75,70 70,50" />
+    </svg>
+
     <section class="main-section">
-      <img src="img/paella2.jpg" alt="Vista panorámica de Castellón y platos típicos">
+      <picture>
+        <!-- Pantallas grandes (mínimo 1024px) -->
+        <source srcset="img/paella2.jpg?as=webp&width=1024" type="image/webp" media="(min-width: 1024px)" />
+        <source srcset="img/paella2.jpg?width=1024" type="image/jpeg" media="(min-width: 1024px)" />
+      
+        <!-- Pantallas medianas (mínimo 600px) -->
+        <source srcset="img/paella2.jpg?as=webp&width=800" type="image/webp" media="(min-width: 600px)" />
+        <source srcset="img/paella2.jpg?width=800" type="image/jpeg" media="(min-width: 600px)" />
+      
+        <!-- Pantallas pequeñas por defecto -->
+        <source srcset="img/paella2.jpg?as=webp&width=480" type="image/webp" />
+        <source srcset="img/paella2.jpg?width=480" type="image/jpeg" />
+      
+        <img class="paella-responsive" src="img/paella2.jpg?width=480" alt="Paella típica de Castellón" />
+      </picture>
+      
+      
+
       <h2>Bienvenido a la experiencia gastronómica de Castellón</h2>
       <p>Descubre eventos culinarios que te harán disfrutar de la mejor comida de la región.</p>
       <a href="pages/categoria.html" class="btn">Explorar Categoría</a>
@@ -30,4 +56,5 @@
 
   <script src="js/script.js"></script>
 </body>
+
 </html>

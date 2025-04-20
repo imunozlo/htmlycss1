@@ -22,13 +22,15 @@
   </header>
 
   <main id="main">
-    <!-- Imagen destacada -->
     <section class="detalle-featured">
-      <img src="../img/ruta-tapa.jpeg" alt="Imagen destacada del Festival de Tapas de Castellón">
+      <picture>
+        <source media="(min-width: 1024px)" srcset="../img/ruta-tapa.jpeg?width=1200">
+        <source media="(min-width: 600px)" srcset="../img/ruta-tapa.jpeg?width=800">
+        <img src="../img/ruta-tapa.jpeg?width=400" 
+             alt="Imagen destacada del Festival de Tapas de Castellón">
+      </picture>
     </section>
-    <!-- Contenido del detalle -->
     <section class="detalle-content">
-      <!-- Sección de texto enriquecido -->
       <article class="detalle-text">
         <h2>Ruta de la Tapa: Un Paseo por los Sabores de Castellón</h2>
         <p>
@@ -50,12 +52,30 @@
           inesperados de la ciudad y disfrutar de una experiencia única en el corazón de Castellón.
         </p>
       </article>
-
       <article class="detalle-gallery">
-        <img src="../img/ruta-tapa1.jpg" alt="Plaza mayor de Castellón">
-        <img src="../img/ruta-tapa2.jpg" alt="Cuatro tapas de la Ruta de la Tapa">
-        <img src="../img/ruta-tapa3.jpeg" alt="Mapa de bares de la Ruta de la Tapa">
+        <img
+          src="../img/ruta-tapa1.jpg?width=400"
+          srcset="
+            ../img/ruta-tapa1.jpg?width=400 1x,
+            ../img/ruta-tapa1.jpg?width=800 2x"
+          alt="Plaza mayor de Castellón">
+      
+        <img
+          src="../img/ruta-tapa2.jpg?width=400"
+          srcset="
+            ../img/ruta-tapa2.jpg?width=400 1x,
+            ../img/ruta-tapa2.jpg?width=800 2x"
+          alt="Cuatro tapas de la Ruta de la Tapa">
+      
+        <img
+          src="../img/ruta-tapa3.jpeg?width=400"
+          srcset="
+            ../img/ruta-tapa3.jpeg?width=400 1x,
+            ../img/ruta-tapa3.jpeg?width=800 2x"
+          alt="Mapa de bares de la Ruta de la Tapa">
       </article>
+      
+      
 
       <article class="detalle-video">
         <div class="video-container">

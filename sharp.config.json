@@ -1,0 +1,29 @@
+{
+    "quality": 80,
+    "jpeg": {
+      "quality": 80,
+      "progressive": true
+    },
+    "webp": {
+      "quality": 80,
+      "lossless": false
+    },
+    "avif": {
+      "quality": 50,
+      "lossless": false
+    },
+    "png": {
+      "compressionLevel": 8,
+      "adaptiveFiltering": true
+    },
+    "gif": {
+      "optimizationLevel": 3
+    },
+    "tiff": {
+      "quality": 80
+    },
+    "heif": {
+      "quality": 50
+    }
+  }
+  

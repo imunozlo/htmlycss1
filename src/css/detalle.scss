@@ -59,6 +59,7 @@ main {
     text-align: center;
     margin-bottom: 2rem;
 
+    picture,
     img {
       width: 100%;
       max-width: 800px;
@@ -77,19 +78,19 @@ main {
       margin: 0 auto;
       text-align: center;
       padding: 2rem;
-      background: #fff; // Blanco es adecuado para el fondo de texto
+      background: #fff;
       border-radius: 8px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
       h2 {
-        font-size: 2rem;
+        font-size: clamp(1.8rem, 2.5vw, 2.5rem);
         color: $primary-color;
         margin-bottom: 1rem;
         font-weight: bold;
       }
 
       p {
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
         line-height: 1.8;
         color: $text-color;
         margin-bottom: 1.5rem;
@@ -103,7 +104,7 @@ main {
 
     .detalle-gallery {
       display: flex;
-      gap: 1rem;
+      gap: clamp(0.5rem, 2vw, 1rem);
       flex-wrap: wrap;
       justify-content: center;
 
@@ -112,6 +113,23 @@ main {
         max-width: 250px;
         height: auto;
         border-radius: 4px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      @media (max-width: 768px) {
+        img {
+          width: calc(50% - 0.5rem);
+        }
+      }
+
+      @media (max-width: 480px) {
+        img {
+          width: 100%;
+        }
       }
     }
 
@@ -120,17 +138,15 @@ main {
         width: 100%;
         max-width: 800px;
         margin: 0 auto; 
-    
+
         iframe {
           width: 100%;
-          height: 450px; 
+          height: clamp(300px, 50vw, 450px); 
           border: 0;
           border-radius: 8px;
         }
       }
     }
-    
-    
   }
 }
 
