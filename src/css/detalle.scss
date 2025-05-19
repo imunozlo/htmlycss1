@@ -157,3 +157,29 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
+.youtube-placeholder {
+  position: relative;
+  cursor: pointer;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.youtube-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.youtube-placeholder .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: url('../img/play-icon.svg') no-repeat center center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+}
+

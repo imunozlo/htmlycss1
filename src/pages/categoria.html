@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eventos Gastronómicos de Castellón</title>
   <link rel="stylesheet" href="../css/style.scss" />
 </head>
+
 <body>
   <a href="#main" class="skip-link">Saltar navegación</a>
   <header>
@@ -32,7 +34,7 @@
             <!-- Mobile -->
             <source srcset="../img/alcachofa.jpg?as=webp&width=480" type="image/webp" />
             <source srcset="../img/alcachofa.jpg?width=480" type="image/jpeg" />
-            <img src="../img/alcachofa.jpg?width=480" alt="Imagen de la Feria de la alcachofa de Benicarló" />
+            <img src="../img/alcachofa.jpg?width=480" alt="Imagen de la Feria de la alcachofa de Benicarló" loading="lazy"/>
           </picture>
           <div class="evento-info">
             <h3>Fiesta de la alcachofa (Benicarló)</h3>
@@ -51,7 +53,8 @@
             <!-- Mobile -->
             <source srcset="../img/ruta-tapa.jpeg?as=webp&width=480" type="image/webp" />
             <source srcset="../img/ruta-tapa.jpeg?width=480" type="image/jpeg" />
-            <img src="../img/ruta-tapa.jpeg?width=480" alt="Imagen del Festival de Tapas de Castellón" />
+            <img src="../img/ruta-tapa.jpeg?width=480" 
+            alt="Imagen del Festival de Tapas de Castellón" loading="lazy"/>
           </picture>
           <div class="evento-info">
             <h3>Ruta de la tapa (Castellón)</h3>
@@ -70,7 +73,8 @@
             <!-- Mobile -->
             <source srcset="../img/queseria.jpg?as=webp&width=480" type="image/webp" />
             <source srcset="../img/queseria.jpg?width=480" type="image/jpeg" />
-            <img src="../img/queseria.jpg?width=480" alt="Imagen de la Exposición de Vinos y Quesos" />
+            <img src="../img/queseria.jpg?width=480" 
+            alt="Imagen de la Exposición de Vinos y Quesos"  loading="lazy"/>
           </picture>
           <div class="evento-info">
             <h3>Visita y cata quesería (Les Coves)</h3>
@@ -82,6 +86,7 @@
     </section>
   </main>
   <include src="src/pages/footer.html"></include>
-  <script src="../js/script.js"></script>
+  <script src="../js/script.js" defer></script>
 </body>
+
 </html>
