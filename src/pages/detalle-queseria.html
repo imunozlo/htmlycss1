@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Visita y cata en la quesería Tot de Poble (Les Coves de Vinromà)</title>
   <link rel="stylesheet" href="../css/detalle.scss">
 </head>
+
 <body>
   <a href="#main" class="skip-link">Saltar navegación</a>
 
@@ -22,73 +24,80 @@
   <main id="main">
     <section class="detalle-featured">
       <picture>
-        <source media="(min-width: 1024px)" srcset="../img/queseria.jpg?width=1200">
-        <source media="(min-width: 600px)" srcset="../img/queseria.jpg?width=800">
-        <img src="../img/queseria.jpg?width=400"  loading="lazy"
-             alt="Imagen destacada de la quesería Tot de Poble en Les Coves de Vinromà">
+        <source srcset="../img/queseria.jpg?as=webp&width=1200" type="image/webp" media="(min-width: 1024px)">
+        <source srcset="../img/queseria.jpg?width=1200" type="image/jpeg" media="(min-width: 1024px)">
+        <source srcset="../img/queseria.jpg?as=webp&width=800" type="image/webp" media="(min-width: 600px)">
+        <source srcset="../img/queseria.jpg?width=800" type="image/jpeg" media="(min-width: 600px)">
+        <source srcset="../img/queseria.jpg?as=webp&width=480" type="image/webp">
+        <source srcset="../img/queseria.jpg?width=480" type="image/jpeg">
+        <img src="../img/queseria.jpg?width=480" width="800" height="533"
+          alt="Imagen destacada de la quesería Tot de Poble en Les Coves de Vinromà">
       </picture>
     </section>
 
     <section class="detalle-content">
-
       <article class="detalle-text">
         <h2>Descubre los Sabores Artesanales: Quesería Tot de Poble</h2>
         <p>
-          La visita a la quesería Tot de Poble, situada en Les Coves de Vinromà, es una experiencia única 
-          que te conecta con la tradición quesera de la región. Durante el recorrido, conocerás el proceso artesanal 
-          de elaboración de quesos, desde la selección de la materia prima hasta el envejecimiento en condiciones óptimas.
+          La visita a la quesería Tot de Poble, situada en Les Coves de Vinromà, es una experiencia única
+          que te conecta con la tradición quesera de la región. Durante el recorrido, conocerás el proceso artesanal
+          de elaboración de quesos, desde la selección de la materia prima hasta el envejecimiento en condiciones
+          óptimas.
         </p>
         <p>
-          Además de una visita guiada por las instalaciones, la cata te permitirá degustar una variedad de quesos 
-          que destacan por su sabor auténtico y la calidad de sus ingredientes. Los productores comparten con pasión 
+          Además de una visita guiada por las instalaciones, la cata te permitirá degustar una variedad de quesos
+          que destacan por su sabor auténtico y la calidad de sus ingredientes. Los productores comparten con pasión
           el saber hacer que ha pasado de generación en generación.
         </p>
         <p>
-          Este evento es ideal para los amantes de la gastronomía que desean profundizar en el mundo de los productos 
-          locales. Con un ambiente acogedor y la posibilidad de adquirir productos directamente del productor, 
+          Este evento es ideal para los amantes de la gastronomía que desean profundizar en el mundo de los productos
+          locales. Con un ambiente acogedor y la posibilidad de adquirir productos directamente del productor,
           la visita a la quesería Tot de Poble se convierte en una cita ineludible para disfrutar y aprender.
         </p>
       </article>
+
       <article class="detalle-gallery">
-        <img
-          src="../img/queseria1.jpg?width=400"
-          srcset="
-            ../img/queseria1.jpg?width=400 1x,
-            ../img/queseria1.jpg?width=800 2x"
-          alt="Puesto de venta de la quesería Tot de Poble">
-      
-        <img
-          src="../img/queseria2.jpg?width=400"
-          srcset="
-            ../img/queseria2.jpg?width=400 1x,
-            ../img/queseria2.jpg?width=800 2x"
-          alt="Elaboración del queso">
-      
-        <img
-          src="../img/queseria3.jpg?width=400"
-          srcset="
-            ../img/queseria3.jpg?width=400 1x,
-            ../img/queseria3.jpg?width=800 2x"
-          alt="Tabla de quesos">
+        <img loading="lazy" src="../img/queseria1.jpg?width=400" srcset="
+      ../img/queseria1.jpg?width=400 1x,
+      ../img/queseria1.jpg?width=800 2x" alt="Puesto de venta de la quesería Tot de Poble" width="800" height="533">
+
+        <img loading="lazy" src="../img/queseria2.jpg?width=400" srcset="
+      ../img/queseria2.jpg?width=400 1x,
+      ../img/queseria2.jpg?width=800 2x" alt="Elaboración del queso" width="800" height="533">
+
+        <img loading="lazy" src="../img/queseria3.jpg?width=400" srcset="
+      ../img/queseria3.jpg?width=400 1x,
+      ../img/queseria3.jpg?width=800 2x" alt="Tabla de quesos" width="800" height="533">
       </article>
-      
-      
+
 
       <article class="detalle-video">
         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/QNucvTKBZuA" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowfullscreen>
-          </iframe>
+          <div class="video-wrapper" id="video-placeholder">
+            <img src="https://img.youtube.com/vi/QNucvTKBZuA/hqdefault.jpg" alt="Miniatura del vídeo">
+            <button type="button" onclick="loadYoutube()">▶ Ver vídeo</button>
+          </div>
         </div>
       </article>
-      
     </section>
   </main>
 
   <include src="src/pages/footer.html"></include>
 
+  <script>
+    function loadYoutube() {
+      const container = document.getElementById("video-placeholder");
+      container.innerHTML = `
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/QNucvTKBZuA?autoplay=1"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>`;
+    }
+  </script>
+
   <script src="../js/script.js" defer></script>
 </body>
+
 </html>

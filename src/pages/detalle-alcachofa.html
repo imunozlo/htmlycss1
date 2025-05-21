@@ -27,15 +27,12 @@
   <main id="main">
     <section class="detalle-featured">
       <picture>
-        <!-- Imagen grande para escritorio -->
         <source srcset="../img/alcachofa.jpg?as=webp&width=1200" type="image/webp" media="(min-width: 1024px)">
         <source srcset="../img/alcachofa.jpg?width=1200" type="image/jpeg" media="(min-width: 1024px)">
 
-        <!-- Imagen mediana para tablets -->
         <source srcset="../img/alcachofa.jpg?as=webp&width=800" type="image/webp" media="(min-width: 600px)">
         <source srcset="../img/alcachofa.jpg?width=800" type="image/jpeg" media="(min-width: 600px)">
 
-        <!-- Imagen pequeña para móviles -->
         <source srcset="../img/alcachofa.jpg?as=webp&width=480" type="image/webp">
         <source srcset="../img/alcachofa.jpg?width=480" type="image/jpeg">
 
@@ -101,27 +98,14 @@
 
       </article>
 
-
-
-
-
       <article class="detalle-video">
-        <!--         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/aaPlfkHa14I" frameborder="0" loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div> -->
         <div class="video-container">
           <div class="video-wrapper" id="video-placeholder">
             <img src="https://img.youtube.com/vi/aaPlfkHa14I/hqdefault.jpg" alt="Miniatura del vídeo">
             <button type="button" onclick="loadYoutube()">▶ Ver vídeo</button>
           </div>
         </div>
-
-
       </article>
-
 
     </section>
   </main>
