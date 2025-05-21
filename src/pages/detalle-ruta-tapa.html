@@ -4,11 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detalle: Ruta de la tapa (Castellón)</title>
-  <!-- Enlaza el CSS compilado para la página de detalle -->
   <link rel="stylesheet" href="../css/detalle.scss">
 </head>
 <body>
-  <!-- Enlace de "saltar navegación" para accesibilidad -->
   <a href="#main" class="skip-link">Saltar navegación</a>
 
   <header>
@@ -23,13 +21,17 @@
 
   <main id="main">
     <section class="detalle-featured">
-      <picture>
-        <source media="(min-width: 1024px)" srcset="../img/ruta-tapa.jpeg?width=1200">
-        <source media="(min-width: 600px)" srcset="../img/ruta-tapa.jpeg?width=800">
-        <img src="../img/ruta-tapa.jpeg?width=400" loading="lazy"
-             alt="Imagen destacada del Festival de Tapas de Castellón">
-      </picture>
+      <img
+        src="../img/ruta-tapa.jpeg?width=400"
+        srcset="
+          ../img/ruta-tapa.jpeg?width=400 400w,
+          ../img/ruta-tapa.jpeg?width=800 800w,
+          ../img/ruta-tapa.jpeg?width=1200 1200w"
+        sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
+        alt="Imagen destacada del Festival de Tapas de Castellón"
+        width="1200" height="675">
     </section>
+
     <section class="detalle-content">
       <article class="detalle-text">
         <h2>Ruta de la Tapa: Un Paseo por los Sabores de Castellón</h2>
@@ -52,46 +54,62 @@
           inesperados de la ciudad y disfrutar de una experiencia única en el corazón de Castellón.
         </p>
       </article>
+
       <article class="detalle-gallery">
-        <img loading="lazy"
+        <img
+          loading="lazy"
           src="../img/ruta-tapa1.jpg?width=400"
           srcset="
             ../img/ruta-tapa1.jpg?width=400 1x,
             ../img/ruta-tapa1.jpg?width=800 2x"
-          alt="Plaza mayor de Castellón">
-      
-        <img loading="lazy"
+          alt="Plaza mayor de Castellón"
+          width="800" height="533">
+
+        <img
+          loading="lazy"
           src="../img/ruta-tapa2.jpg?width=400"
           srcset="
             ../img/ruta-tapa2.jpg?width=400 1x,
             ../img/ruta-tapa2.jpg?width=800 2x"
-          alt="Cuatro tapas de la Ruta de la Tapa">
-      
-        <img loading="lazy"
+          alt="Cuatro tapas de la Ruta de la Tapa"
+          width="800" height="533">
+
+        <img
+          loading="lazy"
           src="../img/ruta-tapa3.jpeg?width=400"
           srcset="
             ../img/ruta-tapa3.jpeg?width=400 1x,
             ../img/ruta-tapa3.jpeg?width=800 2x"
-          alt="Mapa de bares de la Ruta de la Tapa">
+          alt="Mapa de bares de la Ruta de la Tapa"
+          width="800" height="533">
       </article>
-      
-      
 
       <article class="detalle-video">
         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/RE7OTlLT8xA" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowfullscreen>
-          </iframe>
+          <div class="video-wrapper" id="video-placeholder">
+            <img src="https://img.youtube.com/vi/RE7OTlLT8xA/hqdefault.jpg" alt="Miniatura del vídeo">
+            <button type="button" onclick="loadYoutube()">▶ Ver vídeo</button>
+          </div>
         </div>
       </article>
-      
     </section>
   </main>
 
   <include src="src/pages/footer.html"></include>
 
-  <script src="../js/script.js"></script>
+  <script>
+    function loadYoutube() {
+      const container = document.getElementById("video-placeholder");
+      container.innerHTML = `
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/RE7OTlLT8xA?autoplay=1"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>`;
+    }
+  </script>
+
+  <script src="../js/script.js" defer></script>
 </body>
 </html>
